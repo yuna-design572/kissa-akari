@@ -180,7 +180,11 @@ nav.active {
  width: 150px;
  height: auto;
    padding-bottom: .8rem;
-
+}
+.photos img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  opacity: 0.9;
 }
 .availability {
   padding: 2rem 0;
@@ -224,7 +228,9 @@ nav.active {
   opacity: 1;
   transform: translateY(-5px);
 }
-
+footer{
+  height: 2rem;
+}
 
 
 @media (min-width: 769px) {
@@ -234,12 +240,102 @@ nav.active {
     gap: 2rem;
     position: static; /* 必要なら固定解除 */
   }
-
+.main-nav{
+  display: flex;
+  background-color: #f5f0ea;
+}
+.main-nav li{
+  list-style: none;
+}
   .hamburger {
     display: none; /* PCではハンバーガー隠す */
   }
-}
-
+.wrapper {
+    line-height: 1.85;
+  }
   img{
     max-width: 100%;
   }
+  .about{
+    display: flex;
+    padding: 4rem 0 4rem;
+    justify-content: center;
+    gap: 5rem;
+  
+  }
+  .main-large{
+    font-size: 3rem;
+    letter-spacing: .05em;
+  }
+  .sp-br {
+  display: none;
+}
+  .medium-large{
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+  }
+  .about p{
+    font-weight: 500;
+    padding-top: .5rem;
+  }
+  .heading-large{
+    font-size: 1.8rem;
+    letter-spacing: .06em;
+  }
+  .concept{
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  .coffee img,
+  .sweets img,
+  .photos img{
+    width: 350px;
+    max-width: none;
+  }
+  .coffee,
+  .sweets{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  }
+  .coffee{
+    padding-bottom: 2rem;
+  }
+  .coffee-title{
+    padding-left: 3rem;
+  }
+  .sweets-title{
+    padding-left: 14rem;
+  }
+  .info-table th,
+  .info-table td{
+    padding-bottom: 1rem;
+  }
+  iframe{
+    max-width: none;
+    width: 800px;
+    height: 400px;
+  }
+.map {
+  display: flex;
+  justify-content: center; /* 横方向の中央寄せ */
+}
+.photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    justify-items: center;
+    padding: 0;
+    margin: 0 auto;
+    max-width: none;
+  }
+  .photos img{
+    width: 350px;
+  }
+  .copyright{
+    font-size: 22px;
+  }
+}
+
