@@ -10,7 +10,9 @@ img {
   height: auto;
   display: block;
 }
-
+.body{
+  overflow-x: hidden;
+}
 .wrapper{
     font-family: "Shippori Mincho", serif;
     line-height: 1.7;
@@ -23,20 +25,30 @@ a {
     text-decoration: none;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  height: 6rem;
+  height: 17rem;
   box-sizing: border-box;
   background-image: url(../images/cover.jpg);
-}
-.logo{
-  align-items: flex-start;
-  width: 140px;
-  margin-left: -24px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 3%;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+    overflow-x: hidden;
+
 }
 
+header.hide {
+  transform: translateY(-100%);
+}
+.logo{
+  width: 200px;
+}
+.logo,
+.main-nav{
+  margin: 0 auto;
+}
 
 nav {
   display: none;
@@ -104,7 +116,7 @@ nav.active {
   font-size: 2rem;
   text-align: center;
   color: #4a3b33;
-
+  padding-top: 17rem;
 }
   .medium-large{
     font-size: 1.2rem;
@@ -231,7 +243,29 @@ nav.active {
 footer{
   height: 2rem;
 }
-
+@media (max-width: 768px) {
+  .coffee,
+  .sweets {
+    padding-left: 0;
+  }
+    .wrapper {
+    padding: 1rem;
+  }
+    .coffee img,
+  .sweets img {
+    width: 100%;
+    max-width: 150px; /* 任意。これでもOK */
+  }
+  .coffee,
+  .sweets {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: .8rem !important;
+    padding-left: 0 !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
 
 @media (min-width: 769px) {
 
